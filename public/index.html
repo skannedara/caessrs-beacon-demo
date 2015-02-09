@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="twitterDataApp">
+  <head>
+    <title>Caesars Beacon App Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<style type="text/css">
+/* Reset body padding and margins */
+body { margin:0; padding:0; }
+ 
+/* Make Header Sticky */
+#header_container { background:#eee; border:1px solid #666; height:60px; left:0; position:fixed; width:100%; top:0; }
+#header{ line-height:60px; margin:0 auto; width:940px; text-align:center; font-size: 30px;}
+ 
+/* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+#container { margin:0 auto; overflow:auto; padding:80px 0; width:940px; }
+#content{}
+ 
+/* Make Footer Sticky */
+#footer_container { background:#eee; border:1px solid #666; bottom:0; height:60px; left:0; position:fixed; width:100%; }
+#footer { line-height:60px; margin:0 auto; width:940px; text-align:center; }
+</style>  </head>
+  <body class="container"  data-ng-controller="twitterDataControler">
+
+<!-- BEGIN: Sticky Header -->
+<div id="header_container">
+    <div id="header">
+        Caesars App: Beacons Demo
+    </div>
+</div>
+<!-- END: Sticky Header -->
+<br/><br/><br/><br/><br/><br/>
+  	<ul class="nav nav-tabs" id="product-table">
+  <li><a href="#1" data-toggle="tab">Accelerometer</a>
+  </li>
+  <li><a href="#2" data-toggle="tab">Temperature Sensor</a>
+  </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane" id="1">
+      <table class="table table-condensed table-bordered table-striped volumes">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Movement</th>
+            <th>Timestamp</th>
+            <th>Distance</th>
+            <th>Mac Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starbucks</td>
+            <td style="color:#2E9AFE;">10</td>
+            <td>2014-12-04T13:22:53.108Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fd7d8d1c3478</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-I</td>
+            <td style="color:#DBA901;">15</td>
+            <td>2014-12-04T10:02:13.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fe7d8c1c1125</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-III</td>
+            <td style="color:#31B404;">7</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8d1a2471</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-IV</td>
+            <td style="color:#2E9AFE;">11</td>
+            <td>2014-12-04T21:11:04.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8e1s2151</td>
+          </tr>
+          <tr>
+            <td>Event Center</td>
+            <td style="color:#FE2E2E;">18</td>
+            <td>2014-12-04T15:08:10.011Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8d1a1155</td>
+          </tr>
+          <tr>
+            <td>Forum Casino</td>
+            <td style="color:#DF0101;">22</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7e8e1a1956</td>
+          </tr>
+          <tr>
+            <td>Palace Casino</td>
+            <td style="color:#2E9AFE;">9</td>
+            <td>2014-12-04T11:05:00.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8d1a5623</td>
+          </tr>
+          <tr>
+            <td>Augustus Tower</td>
+            <td style="color:#2E9AFE;">11</td>
+            <td>2014-12-04T11:02:19.012Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8d1a1567</td>
+          </tr>
+          <tr>
+            <td>Cafe Logo Buffet</td>
+            <td style="color:#DBA901;">16</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fe7d1d1a3490</td>
+          </tr>
+          <tr>
+            <td>Centurion Tower</td>
+            <td style="color:#31B404;">8</td>
+            <td>2014-12-04T11:07:15.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8e0a1639</td>
+          </tr>
+          <tr>
+            <td>Roman Tower</td>
+            <td style="color:#31B404;">3</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fd7d8d1a2489</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane" id="2">
+      <table class="table table-condensed table-bordered table-striped volumes">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Temperature</th>
+            <th>Timestamp</th>
+            <th>Distance</th>
+            <th>Mac Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Starbucks</td>
+            <td style="color:#B43104;">74&#8457;</td>
+            <td>2014-12-04T13:22:53.108Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fd7d8d1c3478</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-I</td>
+            <td style="color:#31B404;">68&#8457;</td>
+            <td>2014-12-04T10:02:13.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fe7d8c1c1125</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-III</td>
+            <td style="color:#31B404;">69&#8457;</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8d1a2471</td>
+          </tr>
+          <tr>
+            <td>Caesars Floor-IV</td>
+            <td style="color:#AEB404;">65&#8457;</td>
+            <td>2014-12-04T21:11:04.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8e1s2151</td>
+          </tr>
+          <tr>
+            <td>Event Center</td>
+            <td style="color:#DF7401;">71&#8457;</td>
+            <td>2014-12-04T15:08:10.011Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8d1a1155</td>
+          </tr>
+          <tr>
+            <td>Forum Casino</td>
+            <td style="color:#B43104;">76&#8457;</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7e8e1a1956</td>
+          </tr>
+          <tr>
+            <td>Palace Casino</td>
+            <td style="color:#B43104;">75&#8457;</td>
+            <td>2014-12-04T11:05:00.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8d1a5623</td>
+          </tr>
+          <tr>
+            <td>Augustus Tower</td>
+            <td style="color:#31B404;">68&#8457;</td>
+            <td>2014-12-04T11:02:19.012Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fd7d8d1a1567</td>
+          </tr>
+          <tr>
+            <td>Cafe Logo Buffet</td>
+            <td style="color:#DF7401;">71&#8457;</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#08088A;">Far</td>
+            <td>fe7d1d1a3490</td>
+          </tr>
+          <tr>
+            <td>Centurion Tower</td>
+            <td style="color:#AEB404;">64&#8457;</td>
+            <td>2014-12-04T11:07:15.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fe7d8e0a1639</td>
+          </tr>
+          <tr>
+            <td>Roman Tower</td>
+            <td style="color:#AEB404;">65&#8457;</td>
+            <td>2014-12-04T11:01:10.008Z</td>
+            <td style="color:#81BEF7;">Near</td>
+            <td>fd7d8d1a2489</td>
+          </tr>
+        </tbody>
+     </table>
+    </div>
+    </div>
+</div>
+<!-- BEGIN: Sticky Footer -->
+<div id="footer_container">
+    <div id="footer">
+        Developed by: Caesars Entertainment
+    </div>
+</div>
+<!-- END: Sticky Footer -->
+  </body>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  	<script type="text/javascript">
+      
+      var previousPoint = null;
+
+      $(function() {
+
+        $('#product-table a:first').tab('show');
+
+      });
+
+ 		
+	</script>
+</html>
